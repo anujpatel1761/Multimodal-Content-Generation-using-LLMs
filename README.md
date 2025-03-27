@@ -1,49 +1,114 @@
+# 🧠 Multimodal Content Generation using LLMs and Vision Models
+
+A full-stack multimodal AI application that combines **Natural Language Processing (NLP)**, **Computer Vision**, and **Text-to-Image Generation**. This project allows users to chat with an AI assistant, summarize images, and generate visuals from text using **Google Gemini** and **Stable Diffusion XL** via **Replicate API**.
+
 ---
-title: Multimodal Content Generation
-emoji: 🤗
-colorFrom: indigo
-colorTo: green
-sdk: streamlit
-sdk_version: 1.32.0
-app_file: multi-modal-content-generation.py
-pinned: false
-license: apache-2.0
+
+## 🔑 Features
+
+- **🗣️ Chat + Image Understanding**  
+  Upload an image and interact with it via a conversational interface using **Gemini Pro Vision** + **Gemini 1.5 Pro**.
+
+- **🎨 Text-to-Image Generation**  
+  Create custom visuals by describing them in natural language. Powered by **Stable Diffusion XL** via Replicate.
+
+- **⚙️ Configurable Parameters**  
+  Tune image generation settings like resolution, denoising steps, prompt strength, and schedulers.
+
+- **🖼️ Real-Time Streaming & UI**  
+  Stream assistant responses token by token with **Streamlit**. Includes image upload, progress states, and memory.
+
 ---
-## A Multimodal Content Generation have following capabilities:
 
-## 1. A `Conversational chatbot` as same as `ChatGPT v3.5 + Image Summarization` Capabilities through `GOOGLE GEMINI VISION PRO API`.
+## 🛠️ Tech Stack
 
-https://github.com/jaiminjariwala/Multimodal-Content-Generation-using-LLMs/assets/157014747/e4cd27c9-d0ed-42e9-94fc-bc0458eb8437
+| Category        | Tools |
+|----------------|-------|
+| 🔮 LLM & Vision | Google Gemini (`gemini-1.5-pro-latest`, `gemini-1.5-flash`) |
+| 🎨 Image Gen    | Stable Diffusion XL via [Replicate](https://replicate.com/) |
+| 🌐 Frontend     | Streamlit |
+| 🖼️ Image Proc   | Pillow (PIL) |
+| 🔐 Secrets      | python-dotenv |
+| 📦 Env Mgmt     | Conda / pip |
 
-<img width="1312" alt="Screenshot 2024-03-07 at 5 00 49 PM" src="https://github.com/jaiminjariwala/Multimodal-Content-Generation-using-LLMs/assets/157014747/ffa998b9-791d-446b-b951-2f36545ac014">
+---
 
-## 2. `Text to Image` (using Stability Ai (Stable Diffusion)) through `REPLICATE API`.
-<img width="673" alt="Screenshot 2024-03-07 at 10 58 41 AM" src="https://github.com/jaiminjariwala/Multimodal-Content-Generation-using-LLMs/assets/157014747/bbfd362e-5437-4807-b58a-09e6efde06f8">
+## 🚀 Getting Started
 
+### 1. Clone the Repository
 
-## Setup steps:
-1. Create virtual environment
-    ```
-    python -m venv <name of virtual environment>
-    ```
+```bash
+git clone https://github.com/anujpatel1761/Multimodal-Content-Generation-using-LLMs.git
+cd Multimodal-Content-Generation-using-LLMs
+```
 
-2. Activate it
-    ```
-    source <name of virtual environment>/bin/activate
-    ```
+### 2. Set Up Environment
 
-3. Now install required libraries from requirements.txt file using...
-    ```
-    pip install -r requirements.txt
-    ```
-4. Create .env file and add your API TOKEN
-   ```
-   GOOGLE_API_KEY="Enter Your GOOGLE API TOKEN"
-   REPLICATE_API_KEY=""
-   ```
-5. To run app
-    ```
-    streamlit run <name-of-app>.py
-    ```
+```bash
+conda create -n multimodal-ai python=3.10
+conda activate multimodal-ai
+pip install -r requirements.txt
+```
 
-## Also Deployed on Render (but due to inactivity, it may take around 50 seconds to load the site): https://multimodal-content-generation-using-llms.onrender.com/
+### 3. Configure API Keys
+
+Create a `.env` file in the root folder:
+
+```env
+GOOGLE_API_KEY=your_google_api_key_here
+REPLICATE_API_TOKEN=your_replicate_token_here
+```
+
+> ⚠️ Never share your `.env` file or commit secrets to GitHub.
+
+---
+
+## ▶️ Run the App
+
+```bash
+streamlit run multi-modal-content-generation.py
+```
+
+Open the app at: `http://localhost:8501`
+
+---
+
+## 🖼️ UI Preview
+
+> 📷 Screenshot of Text-to-Image Generation Mode:
+
+![UI Screenshot](UIUX.png)
+
+---
+
+## 🧪 Example Prompts
+
+- **Text-to-Image:**  
+  `Give me an image of a person writing code.`
+
+- **Chat + Vision:**  
+  Upload an image and ask:  
+  `Describe what's happening in this image.`
+
+---
+
+## 💡 Future Enhancements
+
+- Replace deprecated Gemini Vision model with `gemini-1.5-flash`
+- Add multi-image upload support
+- Improve image streaming performance
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.  
+Feel free to fork, extend, or contribute!
+
+---
+
+## 🙌 Acknowledgments
+
+- [Google Generative AI](https://ai.google.dev/)
+- [Replicate](https://replicate.com/)
+- [Streamlit](https://streamlit.io/)

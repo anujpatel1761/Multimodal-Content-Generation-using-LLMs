@@ -1,4 +1,4 @@
-# 🧠 Multimodal Content Generation using LLMs and Vision Models
+#  Multimodal Content Generation using LLMs and Vision Models
 
 A full-stack multimodal AI application that combines **Natural Language Processing (NLP)**, **Computer Vision**, and **Text-to-Image Generation**. This project allows users to chat with an AI assistant, summarize images, and generate visuals from text using **Google Gemini** and **Stable Diffusion XL** via **Replicate API**.
 

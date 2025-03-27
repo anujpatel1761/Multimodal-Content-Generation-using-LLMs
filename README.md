@@ -59,8 +59,6 @@ GOOGLE_API_KEY=your_google_api_key_here
 REPLICATE_API_TOKEN=your_replicate_token_here
 ```
 
-> ⚠️ Never share your `.env` file or commit secrets to GitHub.
-
 ---
 
 ## ▶️ Run the App
@@ -100,12 +98,7 @@ Open the app at: `http://localhost:8501`
 
 ---
 
-## 📄 License
 
-This project is licensed under the **MIT License**.  
-Feel free to fork, extend, or contribute!
-
----
 
 ## 🙌 Acknowledgments
 

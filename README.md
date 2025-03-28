@@ -42,7 +42,7 @@ git clone https://github.com/anujpatel1761/Multimodal-Content-Generation-using-L
 cd Multimodal-Content-Generation-using-LLMs
 ```
 
-### 2. Set Up Environment
+### 2. Set Up Environment for project
 
 ```bash
 conda create -n multimodal-ai python=3.10
